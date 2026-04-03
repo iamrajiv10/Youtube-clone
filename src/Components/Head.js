@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { toggleMenu } from '../Utils/appSlice';
-import { YOUTUBE_SEARCH_API } from '../Utils/constants';
-import { json } from 'react-router-dom';
+// import { YOUTUBE_SEARCH_API } from '../Utils/constants';
+// import { json } from 'react-router-dom';
 
 const Head = () => {
   const [searchQuery, setSearchQuery] = useState("");
-  const [suggestions, setSuggestions] = useState([]);
+  // const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
 
-  const searchCache = useSelector((store) => store.search);
+  // const searchCache = useSelector((store) => store.search);
   // useEffect(() => {
   //   const timer = setTimeout(()=> {
   //   if (searchCache[searchQuery]) {
@@ -67,7 +67,9 @@ const Head = () => {
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
         onFocus={() => setShowSuggestions(true)}
-        onBlur={() => setShowSuggestions(false)} />
+        onBlur={() => setShowSuggestions(false)}
+        disabled
+         />
         <button className="border border-gray-300 p-2 px-5 rounded-r-full bg-gray-100">🔍</button>
         </div>
         {showSuggestions && (
