@@ -22,7 +22,7 @@ const LiveChat = () => {
         }, 2000);
 
         return () => clearInterval(i);
-    }, []);
+    }, [dispatch]);
   return (
     <div>
     <div className="w-full h-[450px] mx-2 p-2 border border-black bg-slate-100 rounded-lg overflow-y-scroll flex flex-col-reverse">

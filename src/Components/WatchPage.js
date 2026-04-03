@@ -12,7 +12,7 @@ const WatchPage = () => {
     const dispatch = useDispatch();
     useEffect(()=> {
         dispatch(closeMenu());
-    },[]);
+    },[dispatch]);
   return (
     <div className='w-full'>
     <div className='px-5 flex '>
